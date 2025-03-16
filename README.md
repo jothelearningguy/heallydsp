@@ -52,3 +52,53 @@ export default tseslint.config({
   },
 })
 ```
+
+# HeallyDSP
+
+A web application for connecting Direct Support Professionals (DSPs) with individuals who need support.
+
+## Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/jothelearningguy/heallydsp.git
+cd heallydsp
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Set up environment variables:
+   - Copy `.env.example` to `.env`
+   - Fill in your Azure OpenAI credentials in the `.env` file
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+5. In a separate terminal, start the backend server:
+```bash
+node server.js
+```
+
+## Features
+
+- Direct Support Professional registration
+- Individual/Patient registration
+- Matching algorithm based on preferences and needs
+- Real-time chat functionality
+- Professional profiles and credentials verification
+- Support needs assessment
+- Location-based matching
+
+## Technology Stack
+
+- Frontend: React + TypeScript + Vite
+- Styling: TailwindCSS
+- Backend: Node.js + Express
+- AI Integration: Azure OpenAI
+- Authentication: JWT
+- Real-time Communication: WebSocket
