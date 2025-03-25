@@ -1,43 +1,51 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import TypedHeader from '../components/TypedHeader';
 
 const LandingPage = () => {
   const navigate = useNavigate();
 
+  const headerPhrases = [
+    "Connect with the Perfect DSP Match",
+    "Find Your Ideal Support Professional",
+    "Experience Personalized Care",
+    "Join Our Caring Community"
+  ];
+
   return (
     <div className="fade-in">
       {/* Hero Section */}
-      <section className="py-12 md:py-20">
+      <section className="hero-section py-12 md:py-20">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="hero-content slide-up">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary text-transparent bg-clip-text">
-                Connect with the Perfect DSP Match
-              </h1>
-              <p className="text-lg text-gray-600 mb-8">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
+            <div className="hero-content slide-up w-full">
+              <div className="w-full mb-8">
+                <TypedHeader phrases={headerPhrases} />
+              </div>
+              <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl">
                 Find your ideal Direct Support Professional match using our advanced AI-powered platform.
                 Experience personalized care that understands your unique needs.
               </p>
-              <div className="flex gap-4 mb-12">
-                <button onClick={() => navigate('/register')} className="btn btn-primary">
+              <div className="flex gap-6 mb-16">
+                <button onClick={() => navigate('/register')} className="btn btn-primary text-lg">
                   Get Started
                 </button>
-                <button onClick={() => navigate('/about')} className="btn btn-outline">
+                <button onClick={() => navigate('/about')} className="btn btn-outline text-lg">
                   Learn More
                 </button>
               </div>
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-3 gap-8">
                 <div className="text-center">
-                  <span className="block text-2xl font-bold text-primary mb-2">500+</span>
-                  <span className="text-sm text-gray-600">Active DSPs</span>
+                  <span className="block text-3xl font-bold text-primary mb-2">500+</span>
+                  <span className="text-lg text-gray-600">Active DSPs</span>
                 </div>
                 <div className="text-center">
-                  <span className="block text-2xl font-bold text-primary mb-2">98%</span>
-                  <span className="text-sm text-gray-600">Match Rate</span>
+                  <span className="block text-3xl font-bold text-primary mb-2">98%</span>
+                  <span className="text-lg text-gray-600">Match Rate</span>
                 </div>
                 <div className="text-center">
-                  <span className="block text-2xl font-bold text-primary mb-2">24/7</span>
-                  <span className="text-sm text-gray-600">Support</span>
+                  <span className="block text-3xl font-bold text-primary mb-2">24/7</span>
+                  <span className="text-lg text-gray-600">Support</span>
                 </div>
               </div>
             </div>
